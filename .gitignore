@@ -3,12 +3,14 @@
 /backend/node_modules
 /backend/package.json
 /backend/package-lock.json
+/backend/uploads
 
 # frontend
 /frontend/.env
 /frontend/node_modules
 /frontend/package.json
 /frontend/package-lock.json
+/frontend/*.config.js
 
 .env
 package.json
