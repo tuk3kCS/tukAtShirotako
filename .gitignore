@@ -10,7 +10,6 @@
 /frontend/node_modules
 /frontend/package.json
 /frontend/package-lock.json
-/frontend/*.config.js
 
 .env
 package.json
