@@ -6,19 +6,6 @@ const ChapterSchema = new mongoose.Schema({
 
     title: {
         type: String,
-        required: true,
-    },
-
-    uploader: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    },
-    
-    group: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Group',
-        default: null,
     },
 
     manga: {
@@ -30,6 +17,11 @@ const ChapterSchema = new mongoose.Schema({
     chapterImages: {
         type: [String],
         required: true,
+    },
+
+    comments: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Comment',
     },
 
 }, { timestamps: true });

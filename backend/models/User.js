@@ -28,6 +28,10 @@ const UserSchema = new mongoose.Schema({
         default: 'local', //for OAuth
     },
 
+    displayName: {
+        type: String,
+    },
+    
     profilePicture: {
         type: String,
     },

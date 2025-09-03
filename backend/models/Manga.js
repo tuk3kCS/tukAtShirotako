@@ -4,6 +4,10 @@ const MangaSchema = new mongoose.Schema({
         required: true,
     },
 
+    otherNames: {
+        type: [String],
+    },
+
     description: {
         type: String,
     },
@@ -27,6 +31,28 @@ const MangaSchema = new mongoose.Schema({
 
     coverUrl: {
         type: String,
+    },
+
+    uploader: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+
+    group: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Group',
+        default: null,
+    },
+
+    chapters: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Chapter',
+    },
+
+    comments: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Comment',
     },
 }, { timestamps: true });
 
