@@ -18,12 +18,6 @@ const ChapterSchema = new mongoose.Schema({
         type: [String],
         required: true,
     },
-
-    comments: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Comment',
-    },
-
 }, { timestamps: true });
 
 const Chapter = mongoose.model('Chapter', ChapterSchema);

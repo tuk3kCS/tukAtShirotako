@@ -18,9 +18,9 @@ const MangaSchema = new mongoose.Schema({
         required: true,
     },
 
-    genres: {
+    tags: {
         type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Genre',
+        ref: 'Tag',
         required: true,
     },
 
@@ -34,25 +34,15 @@ const MangaSchema = new mongoose.Schema({
     },
 
     uploader: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'User',
         required: true,
     },
 
     group: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Group',
         default: null,
-    },
-
-    chapters: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Chapter',
-    },
-
-    comments: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Comment',
     },
 }, { timestamps: true });
 

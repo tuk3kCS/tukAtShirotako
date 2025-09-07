@@ -10,12 +10,12 @@ const CommentSchema = new mongoose.Schema({
         required: true,
     },
 
-    chapter: {
+    chapter: { //hiển thị bình luận của từng chương
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Chapter',
     },
 
-    manga: {
+    manga: { //hiển thị tất cả bình luận trên trang chính của truyện
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Manga',
         required: true,
